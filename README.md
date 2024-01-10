@@ -1,15 +1,28 @@
-# google_map_dynamic_key
+# Google Map Dynamic Key
 
-A new Flutter plugin project.
+Instead of hard coding, Google maps API key in AndroidManifest.xml and AppDelegate.swift. We can change the Google Maps key dynamically anytime.
 
-## Getting Started
+We can store the Google Maps key on the server and can get using the rest API. Map key can change the key at runtime after getting from the server.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Examples
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Here are small examples that show you how to use Google Map Dynamic Key.
 
+### Coding
+
+### Flutter Dart Code Implementation
+
+```dart
+final _googleMapDynamicKeyPlugin = GoogleMapDynamicKey();
+await _googleMapDynamicKeyPlugin
+        .setGoogleApiKey("Your API KEY")
+        .then((value) {
+      setState(() {
+        isLoading = false;
+      });
+    });
+```
+
+## Developer
+
+Made by Um Kithya Senior Flutter Developer with ❤️
